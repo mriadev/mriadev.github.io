@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>        
+<horario>
+    <titulo>Maria Cervilla Alcalde</titulo>
+    <table>
+        <tr>
+            <td>HORA</td>
+            <td>LUNES</td>
+            <td>MARTES</td>
+            <td>MIERCOLES </td>
+            <td>JUEVES</td>
+            <td>VIERNES</td>
+        </tr>
+
+        <tr>
+            <td>8:15 - 9:15</td>
+            <td>Programación</td>
+            <td>EEDD</td>
+            <td>Programación</td>
+            <td>EEDD</td>
+            <td>BBDD</td>
+        </tr>
+
+        <tr>
+            <td>9:15 - 10:15</td>
+            <td>Programación</td>
+            <td>SSII</td>
+            <td>Programación</td>
+            <td>EEDD</td>
+            <td>BBDD</td>
+        </tr>
+        <tr>
+            <td>10:15 - 11:15</td>
+            <td>LLMM</td>
+            <td>SSII</td>
+            <td>BBDD</td>
+            <td>SSII</td>
+            <td>LLMM</td>
+        </tr>
+        <tr>
+            <td>11:15 - 11:45</td>
+            <td>RECREO</td>
+            <td>RECREO</td>
+            <td>RECREO</td>
+            <td>RECREO</td>
+            <td>RECREO</td>
+        </tr>
+
+        <tr>
+            <td>11:45 - 12:45</td>
+            <td>LLMM</td>
+            <td>SSII</td>
+            <td>BBDD</td>
+            <td>SSII</td>
+            <td>LLMM</td>
+        </tr>
+
+        <tr>
+            <td>12:45 - 13:45</td>
+            <td>BBDD</td>
+            <td>Programación</td>
+            <td>FOL</td>
+            <td>SSII</td>
+            <td>Programación</td>
+        </tr>
+
+        <tr>
+            <td>13:45 - 14:45</td>
+            <td>BBDD</td>
+            <td>Programación</td>
+            <td>FOL</td>
+            <td>FOL</td>
+            <td>Programación</td>
+        </tr>
+
+    </table>
+
+</horario>
