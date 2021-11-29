@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Formularios</title>
+</head>
+<body>
+    <h1>Formaluario</h1>
+    <form action="mailto:a20cealma@iesgrancapitan.org" method="post" name="formulario1">
+       <p>
+            <label>Nombre:
+            <input type="text" name="nombre" placeholder="Nombre" maxlength="10"/>
+            </label>
+        </p>
+        <p>
+            <label>Fecha de nacimiento:
+            <input type="date" name="dd/mm/aaaa" placeholder="Nacimiento"/>
+            </label>
+        </p>
+        <p>
+            <label>Numero de horas:
+            <input type="number" name="nhoras" placeholder="Horas" title="Horas diarias videojuegos" maxlength="10"/>
+            </label>
+        </p>
+        <p>
+            <label>Email:
+            <input type="email" name="email" placeholder="Email"/>
+            </label>
+        </p>
+
+        <p>
+            <label>VC:</br>
+            <input type="checkbox" name="VC1" value="PS"/>PS</br>
+            <input type="checkbox" name="VC2" value="PC"/>PC</br>
+            <input type="checkbox" name="VC3" value="Nintendo"/>Nintendo</br>
+            <input type="checkbox" name="VC4" value="XBOX"/>XBOX
+            </label>
+        </p>
+
+        <p>
+            <label>Elige juego preferido:</br>
+            <input type="radio" name="vjp" value="LOL"/>LOL</br>
+            <input type="radio" name="vjp" value="Diablo"/>Diablo</br>
+            <input type="radio" name="vjp" value="Fortnite"/>Fortnite</br>
+            <input type="radio" name="vjp" value="Monster Hunter"/>Monster Hunter
+            </label>
+        </p>
+
+        <textarea name="descripcion" cols="30" rows="10">Descripcion</textarea></br>
+
+        <select name="grupos" id="">
+            <option value="0">Elegir</option>
+            <option value="1">1DAW</option>
+            <option value="2">2DAW</option>
+            <option value="3">1ASIR</option>
+            <option value="4">2ASIR</option>
+        </select>
+
+        <p>
+            <input type="submit" name="submit" value="Enviar"/>
+        </p>
+        
+        
+
+    </form>
+</body>
+</html>
