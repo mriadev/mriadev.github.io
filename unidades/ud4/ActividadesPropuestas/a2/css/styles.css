@@ -1,0 +1,123 @@
+h3{
+    color: rgb(63, 63, 110);
+}
+/*Ejercicio 1*/
+#ej1{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+}
+
+/*Ejercicio 2*/
+
+#ej2 p, #ej2 h4{
+    width: 20%;
+    background-color: white;
+    margin:0 auto;
+
+
+}
+
+/*Ejercicio 3*/
+
+#ej3 p, #ej3 h4{
+    width: 20%;
+    background-color: white;
+    margin:0 auto;
+    
+}
+
+#ej3 a{
+    text-decoration: none;
+}
+
+/*Ejercicio 4*/
+
+#ej4 h4{
+    text-transform: uppercase;
+}
+#ej4 p{
+    text-transform: initial;
+}
+
+/*Ejercicio 5*/
+#ej5{
+    width: 40%;
+    background-color: gray;
+    text-align: left;
+    text-indent: 20px;
+}
+
+
+/*Ejercicio 6*/
+
+#serif{
+    font-family: serif;
+}
+#sans-serif{
+    font-family: sans-serif;
+}
+
+#monospace{
+    font-family: monospace;
+}
+
+#fantasy{
+    font-family: fantasy;
+}
+#cursive{
+    font-family:cursive;
+}
+
+/* Ejercicio 7 */
+
+#ej7{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/* Ejercicio 8 */
+
+#ej8 span{
+    color: red;
+}
+
+/* Ejercicio 9 */
+
+#ej9::first-letter{
+    color: red;
+    font-size: xx-large;
+}
+
+/* Ejercicio 10 */
+
+#ej10 {
+    background-color: rgb(214, 214, 214);
+    width: 50%;
+    text-align: center;
+}
+#ej10 img{
+    width: 5%;
+}
+#ej10 h4{
+    font-size: 2em;
+    display: inline-block;
+}
+#ej10 p{
+    margin: 2px;
+    margin-top: -10px;
+    padding-top: -10px;
+    padding-bottom: 20px;
+}
+
+/* Ejercicio 11 */
+
+#ej11 {
+    text-decoration: overline green;
+}
+
+/* Ejercicio 12 */
+
+#ej12 nav ul li{
+    display: inline-block;
+}

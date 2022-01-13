@@ -1,0 +1,22 @@
+
+/* Ejercicio 1 */
+#ej1 p{
+    background-color: gray;
+}
+
+
+/* Ejercicio 2 */
+
+#caja1{
+    width: 15%;
+    border: 1px black solid;
+    padding: 60px 30px 60px 30px;
+}
+
+/* Ejercicio 3 */
+
+#caja2{
+    width: 15%;
+    border: 30px gray solid;
+    padding: 60px 30px 60px 30px;
+}
