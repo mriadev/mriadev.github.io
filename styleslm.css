@@ -1,0 +1,251 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+  
+}
+
+#grid{
+ width: 100%;
+ height: 100vh;
+ margin: 0 auto; 
+
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 15% 75% 1fr;
+ grid-template-areas: 
+    "nav"
+    "contenido"
+    "actividades"
+    "footer"
+;
+   
+}
+
+#nav{
+    grid-area: nav;  
+}
+
+#nav ul{
+    list-style: none;
+    gap: 35px;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    margin-top: 35px;
+    
+}
+#nav ul li{
+    
+    margin: 5px;
+}
+
+#nav ul li a{
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+    background-color: #ff9a19;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+
+
+#nav ul li a:hover{
+    box-shadow: 2px 2px 2px rgb(129, 129, 129);
+}
+
+hr{
+    grid-area: hr;
+    border-top: 1px solid black;
+    height: 2px;
+     max-width: 200px;
+    padding: 0;
+    margin: 5px auto 0 auto;
+    text-align: center;
+}
+
+#contenido{
+    grid-area: contenido;
+    position: relative;
+  display: inline-block;
+}
+
+#contenido #fondo{
+    width: 100%;
+    height: 100%;
+    filter: blur(0.5px)
+}
+
+
+.texto-img{
+    position: absolute;    
+    bottom: 100px;
+    right: 5rem;
+    
+}
+
+.texto-img h2{
+    font-size: 5em;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 1px 3px rgb(22, 22, 22);
+}
+
+.texto-img p{
+    font-size: 3.5em;
+    font-weight: normal;
+    text-shadow: 1px 0px 9px rgb(50, 31, 84);
+    color: #ff9a19;
+    letter-spacing: 2px;
+}
+
+#actividades{
+    grid-area: actividades;
+}
+
+#actividades ul{
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    justify-content: left;
+    margin: 5px;
+    
+}
+
+#actividades ul li a{
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+    padding: 8px;
+
+}
+
+#actividades h2{
+    font-size: 35px;
+    text-align: left;
+    margin-left: 5px;
+    margin-top: 20px;
+    color: #ee8b09;
+    text-shadow: 1px 1px 0px rgb(17, 17, 17);
+}
+
+#footer{
+    grid-area: footer;
+    color:#6c757d;
+    margin-top: 25px;
+}
+
+@media (max-width: 412px) {
+
+    #grid{
+        grid-template-rows: 25% 50% 1fr;
+    }
+
+    #nav{
+        background-color: #ee8b09;
+    }
+
+    #nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(8,90%);
+        margin-right: 10px;
+        text-align: center;
+        padding: 3px;
+        gap: 25px;
+        
+    }
+
+
+
+    #nav ul li a{
+        background-color: #ee8b09;
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 1px 0px rgb(17, 17, 17);
+    }
+
+    #nav ul li a:hover{
+        box-shadow: none;
+    }
+
+    #inicio{
+        font-size: 30px;
+    }
+    .texto-img{
+        bottom: 85px;
+        right: 1.5rem;
+        margin: 15px;
+        
+    }
+
+    .texto-img h2{
+        font-size: 2.8em;
+        color: rgb(255, 255, 255);
+        text-shadow: 3px 1px 3px rgb(31 31 31);
+    }
+    
+    .texto-img p{
+        font-size: 1em;
+        font-weight: normal;
+        text-shadow: 2px 1px 2px rgb(14 14 14);
+        color: #ff8f00;
+        letter-spacing: 2px;
+    }
+
+    #contenido #fondo {
+
+        height: 100%;
+    }
+
+    #actividades h2{
+        text-align: center;
+    }
+    #actividades ul{
+        display: block;
+    }
+    
+}
+
+@media (min-width: 1920px) {
+    #grid{
+        grid-template-rows: 10% 50% 1fr;
+    } 
+
+
+    #perfil{
+        height: 180px;
+    }
+
+    #nav ul{
+        font-size: 40px;
+    }
+
+    #footer p{
+        font-size: 35px;
+    }
+
+    .texto-img {
+        bottom: 59px;
+        right: 5rem;
+    }
+
+    .texto-img h2{
+        font-size: 7em;
+        color: rgb(255, 255, 255);
+        text-shadow: 3px 1px 3px rgb(31 31 31);
+    }
+    .texto-img p{
+        font-size: 3.5em;
+        font-weight: normal;
+        text-shadow: 2px 1px 2px rgb(14 14 14);
+        color: #ff8f00;
+        letter-spacing: 2px;
+    }
+
+}
+
+@media (min-width: 2048px) {
+
+}
+
