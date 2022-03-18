@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+           display: grid;
+           grid-template-areas:
+           "header header header"
+           "nav article ads" 
+           "footer footer footer";
+           grid-template-rows: 50px 1fr 50px;
+           grid-template-columns: 20% 1fr 15%;
+           gap: 5px;
+           height: 100vh;
+           margin: 0;
+       }
+       header, article, nav, div, footer{
+           padding: 15px;
+           background-color: red;
+       }
+       #header{
+           grid-area: header;
+       }
+       #nav{
+           grid-area: nav;
+       }
+       #article{
+           grid-area: article;
+       }
+       div{
+           grid-area: ads;
+       }
+       #footer{
+           grid-area: footer;
+       }
+    </style>
+</head>
+<body>
+    <header id="header">Header</header>
+    <article id="article">Article</article>
+    <nav id="nav">Nav</nav>
+    <div id="aside">Div</div>
+    <footer id="footer">Footer</footer>
+</body>
+</html>

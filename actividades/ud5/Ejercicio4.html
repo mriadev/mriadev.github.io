@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Ejercicio 1*/
+       nav ul{
+           display: flex;
+           justify-content: space-between;
+           list-style: none;
+
+       }
+       nav ul li{
+            border: 2px solid blue;
+           padding: 10px;
+           margin: 5px;
+       }
+
+       nav ul li a{
+           text-decoration: none;
+           font-size: 20px;
+       }
+
+       /* Ejercicio 2 */
+       .container{
+           display: flex;
+       }
+       .container > div{
+           font-size: 2vw;
+           padding: .5em;
+           color: white;
+       }
+       .red{
+        background-color: red;
+        flex-grow: 1;
+       }
+       .green{
+        background-color: green;
+       }
+       .blue{
+        background-color: blue;
+        background: steelblue;
+        width: 40vw;
+       }
+    </style>
+</head>
+<body>
+    <h2>Ejercicio 1</h2>
+    <nav>
+        <ul>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3 is longer</a></li>
+            <li><a href="#">Page 4</a></li>
+        </ul>
+    </nav>
+    <h2>Ejercicio 2</h2>
+    <div class="container">
+        <div class="red">1</div>
+        <div class="green">2</div>
+        <div class="blue">3
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce erat ante, cursus eu sapien imperdiet, dapibus volutpat turpis. Aenean lobortis risus nec dapibus fringilla. Nam sagittis nulla in tempus vulputate. Etiam ut magna pellentesque, porttitor dolor et, bibendum tortor. Vestibulum scelerisque ipsum vitae arcu molestie molestie. Pellentesque ultricies ornare purus, a dignissim ipsum fermentum non. Vivamus interdum euismod massa, vel scelerisque lacus volutpat ac. 
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>
