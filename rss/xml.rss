@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss>
     <channel>
-        <title>Canal Lenguaje de Marcas</title>
-        <link>https://mriadev.github.io/index.html</link>
-        <description>Ejercicio 1</description>
+        <title>Canal RSS Maria Cervilla Alcalde</title>
+        <link>https://mriadev.github.io/</link>
+        <description>Página Web María Cervilla Alcalde</description>
         <item>
-            <title>Ejercicio1 TEMA 3</title>
-            <link>https://mriadev.github.io/actividades/ud3/listas/definicion.html</link>
+            <title>Ejercicio Listas TEMA 3</title>
+            <link>https://github.com/mriadev/mriadev.github.io/blob/main/actividades/ud3/listas/definicion.html</link>
             <description>Ejercicio Listas Definición</description>
             <pubDate>Martes 28 de Marzo de 2022</pubDate>
         </item>
