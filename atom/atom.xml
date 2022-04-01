@@ -4,19 +4,19 @@
   <link href="https://mriadev.github.io/"/>
   <updated>2022-04-05T11:02:00Z</updated>
   <author><name>Maria Cervilla Alcalde</name></author>
-  <id>urn:mariaca:60a76c80-d399-11d9-b93C-0003939e0af6a</id>
+  <id>https://mriadev.github.io/</id>
 
   <entry>
     <title>Ejercicio 1 XSD</title>
     <link href="https://mriadev.github.io/actividades/ud6/ej2.xml"/>
-    <id>urn:mariaca:60a76c80-d399-11d9-b93C-0003939e0af4b</id>
+    <id>https://mriadev.github.io/actividades/ud6/ej2.xml</id>
     <updated>2022-04-05T11:02:00Z</updated>
     <author><name>María Cervilla</name></author>
   </entry>
   <entry>
     <title>Ejercicio 2 XSD</title>
     <link href="https://mriadev.github.io/actividades/ud6/ej3.xml"/>
-    <id>urn:mariaca:60a76c80-d399-11d9-b93C-0003939e0af3c</id>
+    <id>https://mriadev.github.io/actividades/ud6/ej3.xml</id>
     <updated>2022-04-05T11:02:00Z</updated>
     <author><name>María Cervilla</name></author>
   </entry>
