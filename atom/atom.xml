@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Canal Atom Maria Cervilla Alcalde</title>
-  <link rel="self" href="https://mriadev.github.io/"/>
+  <link href="https://mriadev.github.io/"/>
   <updated>2022-04-05T11:02:00Z</updated>
   <author><name>Maria Cervilla Alcalde</name></author>
-  <id>urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6</id>
+  <id>urn:mariaca:60a76c80-d399-11d9-b93C-0003939e0af6</id>
 
   <entry>
     <title>Ejercicio 1 XSD</title>
-    <link rel="self" href="https://mriadev.github.io/actividades/ud6/ej2.xml"/>
-    <id>urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af4</id>
+    <link href="https://mriadev.github.io/actividades/ud6/ej2.xml"/>
+    <id>urn:mariaca:60a76c80-d399-11d9-b93C-0003939e0af4</id>
     <updated>2022-04-05T11:02:00Z</updated>
     <author><name>María Cervilla</name></author>
   </entry>
   <entry>
     <title>Ejercicio 2 XSD</title>
-    <link rel="self" href="https://mriadev.github.io/actividades/ud6/ej3.xml"/>
-    <id>urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af3</id>
+    <link href="https://mriadev.github.io/actividades/ud6/ej3.xml"/>
+    <id>urn:mariaca:60a76c80-d399-11d9-b93C-0003939e0af3</id>
     <updated>2022-04-05T11:02:00Z</updated>
     <author><name>María Cervilla</name></author>
   </entry>
