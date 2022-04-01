@@ -3,6 +3,7 @@
   <title>Canal Atom Maria Cervilla Alcalde</title>
   <id>https://mriadev.github.io/</id>
   <link href="https://mriadev.github.io/"/>
+  <updated>2003-12-13T18:30:02Z</updated>
   <author><name>Maria Cervilla Alcalde</name></author>
  
 
@@ -10,12 +11,14 @@
     <title>Ejercicio 1 XSD</title>
      <id>https://mriadev.github.io/actividades/ud6/ej2.xml</id>
     <link href="https://mriadev.github.io/actividades/ud6/ej2.xml"/>   
+    <updated>2003-12-13T18:30:02Z</updated>
     <author><name>María Cervilla</name></author>
   </entry>
   <entry>
     <title>Ejercicio 2 XSD</title>
     <id>https://mriadev.github.io/actividades/ud6/ej3.xml</id>
     <link href="https://mriadev.github.io/actividades/ud6/ej3.xml"/>
+    <updated>2003-12-13T18:30:02Z</updated>
     <author><name>María Cervilla</name></author>
   </entry>
 </feed>
