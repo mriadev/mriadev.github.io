@@ -19,5 +19,15 @@
             <link>https://mriadev.github.io/actividades/ud5/Ejercicio6.html</link>
             <description>Ejercicio CSS Responsive</description>
         </item>
+        <item>
+            <title>Actividad ERP TEMA 11</title>
+            <link>https://mriadev.github.io/lm.html#u11</link>
+            <description>Actividad sobre ERP del Tema 11</description>
+        </item>
+        <item>
+            <title>Actividad Odoo TEMA 11</title>
+            <link>https://mriadev.github.io/lm.html#u11</link>
+            <description>Actividad sobre instalación y configuración de Odoo Tema 11</description>
+        </item>
     </channel>
 </rss>
