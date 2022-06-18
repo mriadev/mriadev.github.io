@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios XQUERY</title>
+    <style>
+        body {
+            padding: 10px;
+            margin: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb(32, 32, 32);
+        }
+
+        xmp {
+            color: rgb(47, 47, 65);
+        }
+
+        h4{
+            background-color: rgb(224, 224, 224);
+        }
+        .solution span {
+            display: none;
+        }
+
+        .solution:hover span {
+            display: block;
+            color: rgb(100, 16, 16);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicios XQUERY</h1>
+    <h2>Ejercicio Empresa paquetería</h2>
+    <div>
+        <xmp>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <empresa_transporte>
+                <!-- CAMIONES-->
+                <camiones>
+                    <camion cod="C1" camionero="CA1">
+                        <matricula>6721 VOY</matricula>
+                        <modelo>Mercedes Gama Actros</modelo>
+                        <tipo>Contenedor</tipo>
+                        <potencia>625</potencia>
+                    </camion>
+                    <camion cod="C2" camionero="CA2">
+                        <matricula>6972 XUV</matricula>
+                        <modelo>DAF Gama FT</modelo>
+                        <tipo>Contenedor</tipo>
+                        <potencia>530</potencia>
+                    </camion>
+                    <camion cod="C3" camionero="CA3">
+                        <matricula>4394 OXE</matricula>
+                        <modelo>Renault Trucks Gama T</modelo>
+                        <tipo>Contenedor</tipo>
+                        <potencia>520</potencia>
+                    </camion>
+                    <camion cod="C4" camionero="CA4">
+                        <matricula>2760 ILF</matricula>
+                        <modelo>Renault Trucks Gama D</modelo>
+                        <tipo>Cisterna</tipo>
+                        <potencia>320</potencia>
+                    </camion>
+                    <camion cod="C5" camionero="CA5">
+                        <matricula>8562 OFA</matricula>
+                        <modelo>Iveco S-Way</modelo>
+                        <tipo>Cisterna</tipo>
+                        <potencia>490</potencia>
+                    </camion>
+                    <camion cod="C6" camionero="CA6">
+                        <matricula>8562 OFA</matricula>
+                        <modelo>MAN Serie TGX</modelo>
+                        <tipo>Cisterna</tipo>
+                        <potencia>680</potencia>
+                    </camion>
+                    <camion cod="C7">
+                        <matricula>3037 MDA</matricula>
+                        <modelo>Scania Serie R</modelo>
+                        <tipo>Frigorífico</tipo>
+                        <potencia>500</potencia>
+                    </camion>
+                    <camion cod="C8">
+                        <matricula>5150 GFE</matricula>
+                        <modelo>DAF XF</modelo>
+                        <tipo>Frigorífico</tipo>
+                        <potencia>460</potencia>
+                    </camion>
+                    <camion cod="C9">
+                        <matricula>5198 AQS</matricula>
+                        <modelo>MAN Serie TGM</modelo>
+                        <tipo>Jaula</tipo>
+                        <potencia>620</potencia>
+                    </camion>
+                    <camion cod="C10">
+                        <matricula>4060 XIJ</matricula>
+                        <modelo>Scania Serie S</modelo>
+                        <tipo>Tolva</tipo>
+                        <potencia>510</potencia>
+                    </camion>
+
+                </camiones>
+
+                <!-- CAMIONEROS-->
+                <camioneros>
+                    <camionero id="CA1">
+                        <dni>92208330L</dni>
+                        <nombre>Juan</nombre>
+                        <telefono>651865387</telefono>
+                        <salario>1500</salario>
+                        <ciudad>Málaga</ciudad>
+                    </camionero>
+                    <camionero id="CA2">
+                        <dni>22028366R</dni>
+                        <nombre>Antonio</nombre>
+                        <telefono>683697654</telefono>
+                        <salario>1900</salario>
+                        <ciudad></ciudad>
+                    </camionero>
+                    <camionero id="CA3">
+                        <dni>99240378R</dni>
+                        <nombre>Sandra</nombre>
+                        <telefono>694827469</telefono>
+                        <salario>1900</salario>
+                        <ciudad>Badajoz</ciudad>
+                    </camionero>
+                    <camionero id="CA4">
+                        <dni>58032347N</dni>
+                        <nombre>José</nombre>
+                        <telefono>638675935</telefono>
+                        <salario>1850</salario>
+                        <ciudad>Murcia</ciudad>
+                    </camionero>
+                    <camionero id="CA5">
+                        <dni>30049881J</dni>
+                        <nombre>Laura</nombre>
+                        <telefono>604815076</telefono>
+                        <salario>1690</salario>
+                        <ciudad>Teruel</ciudad>
+                    </camionero>
+                    <camionero id="CA6">
+                        <dni>55880518V</dni>
+                        <nombre>Jesús</nombre>
+                        <telefono>617658790</telefono>
+                        <salario>1755</salario>
+                        <ciudad>Pamplona</ciudad>
+                    </camionero>
+
+                </camioneros>
+                <!-- PAQUETES-->
+                <paquetes>
+                    <paquete cod="P1" camionero="CA1" cp="CP18680">
+                        <descripcion>Envío certificado</descripcion>
+                        <destino>Salobreña</destino>
+                        <direccion_destinatario>Calle Abad</direccion_destinatario>
+                    </paquete>
+                    <paquete cod="P2" camionero="CA1" cp="CP14005">
+                        <descripcion>Paquete frágil</descripcion>
+                        <destino>Córdoba</destino>
+                        <direccion_destinatario>Calle Medina Azahara</direccion_destinatario>
+                    </paquete>
+                    <paquete cod="P3" camionero="CA2" cp="CP14550">
+                        <descripcion>Envío estandar</descripcion>
+                        <destino>Córdoba</destino>
+                        <direccion_destinatario>Calle Fátima</direccion_destinatario>
+                    </paquete>
+                    <paquete cod="P4" camionero="CA3" cp="CP04770">
+                        <descripcion>Paquete certificado</descripcion>
+                        <destino>Adra</destino>
+                        <direccion_destinatario>Calle de la Alegría</direccion_destinatario>
+                    </paquete>
+
+                </paquetes>
+                <!-- CIUDADES-->
+                <ciudades>
+                    <ciudad cp="CP18680">
+                        <nombre>Salobreña</nombre>
+                        <provincia>Granada</provincia>
+                    </ciudad>
+                    <ciudad cp="CP14005">
+                        <nombre>Córdoba</nombre>
+                        <provincia>Córdoba</provincia>
+                    </ciudad>
+                    <ciudad cp="CP14550">
+                        <nombre>Montilla</nombre>
+                        <provincia>Córdoba</provincia>
+                    </ciudad>
+                    <ciudad cp="CP04770">
+                        <nombre>Adra</nombre>
+                        <provincia>Almería</provincia>
+                    </ciudad>
+                    <ciudad cp="CP11520">
+                        <nombre>Rota</nombre>
+                        <provincia>Cádiz</provincia>
+                    </ciudad>
+                    <ciudad cp="CP28931">
+                        <nombre>Móstoles</nombre>
+                        <provincia>Madrid</provincia>
+                    </ciudad>
+                    <ciudad cp="CP28931">
+                        <nombre>Móstoles</nombre>
+                        <provincia>Madrid</provincia>
+                    </ciudad>
+                    <ciudad cp="CP08301">
+                        <nombre>Mataró</nombre>
+                        <provincia>Barcelona</provincia>
+                    </ciudad>
+
+                </ciudades>
+
+            </empresa_transporte>
+
+
+        </xmp>
+
+    </div>
+    <div>
+        <h3>Consultas XQuery</h3>
+        <h4>1. Muestra los camiones de tipo "Contenedor"</h4>
+        <p class="solution">Solución: <span>
+                <camiones>
+                    {
+                    for $camiones in doc("camiones.xml")/empresa_transporte/camiones/camion
+                    where $camiones/tipo = 'Contenedor'
+
+                    return $camiones
+
+                    }
+
+                </camiones>
+                <br><br>
+                <camiones>
+                    {
+                    for $camiones in doc("camiones.xml")/empresa_transporte/camiones/camion[tipo='Contenedor']
+
+                    return $camiones
+
+                    }
+
+                </camiones>
+            </span>
+        </p>
+
+        <h4>2 Modelo de los camiones que tengan camionero.
+        </h4>
+        <p class="solution">Solución: <span>
+                <camiones>
+                    {
+                    for $camiones in doc("camiones.xml")/empresa_transporte/camiones/camion[@camionero]/modelo
+
+                    return <camion>{$camiones}</camion>
+
+                    }
+
+                </camiones>
+            </span>
+        </p>
+
+        <h4>3. Mostrar los paquetes del camionero "Juan"</h4>
+        <p class="solution">Solución: <span>
+                <paquetes>
+                    {
+                    for $paquetes in
+                    doc("camiones.xml")/empresa_transporte/paquetes/paquete[@camionero=//camionero[nombre='Juan']/@id]
+
+                    return $paquetes
+
+                    }
+
+                </paquetes>
+            </span>
+        </p>
+
+        <h4>4. Mostrar el dni y nombre de los camioneros con salario superior a 1500€</h4>
+        <p class="solution">Solución: <span>
+                <camioneros>
+                    {
+                    for $camioneros in doc("camiones.xml")/empresa_transporte/camioneros/camionero[salario>1500]
+
+                    return <camionero>{$camioneros/dni | $camioneros/nombre}</camionero>
+                    }
+                </camioneros>
+            </span>
+        </p>
+
+        <h4>5. Mostrar código de los paquetes con destino "Córdoba"</h4>
+        <p class="solution">Solución: <span>
+                <paquetes>
+                    {
+                    for $paquetes in doc("camiones.xml")/empresa_transporte/paquetes/paquete[destino='Córdoba']/@cod
+
+                    return <paquete>{$paquetes}</paquete>
+                    }
+                </paquetes>
+            </span>
+        </p>
+
+        <h4>6. Mostrar nombre y salario de los camioneros que no tienen paquetes</h4>
+        <p class="solution">Solución: <span>
+
+                <camioneros>
+                    {
+                    for $camioneros in
+                    doc("camiones.xml")/empresa_transporte/camioneros/camionero[not(@id=//paquete/@camionero)]
+
+                    return <camionero>{$camioneros/nombre | $camioneros/salario}</camionero>
+                    }
+                </camioneros>
+            </span>
+        </p>
+
+        <h4>7. Muestra la cantidad de paquetes donde la provincia de la ciudad es Granada</h4>
+        <p class="solution">Solución: <span>
+
+
+                let $paquetes :=
+                count(doc("camiones.xml")/empresa_transporte/paquetes/paquete[@cp=//ciudad[provincia='Granada']/@cp])
+
+                return <paquetes_granada>{$paquetes}</paquetes_granada>
+
+            </span>
+        </p>
+
+        <h4>8. Mostrar el camionero que conduce el último camión</h4>
+        <p class="solution">Solución: <span>
+
+                for $camionero in
+                doc("camiones.xml")/empresa_transporte/camioneros/camionero[@id=//camion[last()]/@camionero]
+                return $camionero
+            </span>
+        </p>
+
+        <h4>9. Muestra la media total de la potencia de todos los camiones</h4>
+        <p class="solution">Solución: <span>
+
+                let $media := avg(doc("camiones.xml")/empresa_transporte/camiones/camion/potencia/text())
+
+                return <potencia_media>{$media}</potencia_media>
+            </span>
+        </p>
+
+        <h4>10. Muestra los datos del conductor que conduce el camión con más potencia</h4>
+        <p class="solution">Solución: <span>
+                for $camionero in
+                doc("camiones.xml")/empresa_transporte/camioneros/camionero[@id=//camion[potencia=max(//potencia)]/@camionero]
+                return $camionero
+
+            </span>
+        </p>
+    </div>
+
+    <h2>Ejercicio Empresa</h2>
+    <div>
+        <xmp>
+            <?xml version="1.0" encoding="UTF-8"?>
+
+            <empresa>
+                <!-- CLIENTES-->
+                <clientes>
+                    <cliente id="C1">
+                        <dni>71053254K</dni>
+                        <nombre>Antonio</nombre>
+                        <apellido>Merino</apellido>
+                        <ciudad>Córdoba</ciudad>
+                        <telefono>634061110</telefono>
+                    </cliente>
+                    <cliente id="C2">
+                        <dni>72195219J</dni>
+                        <nombre>Alba</nombre>
+                        <apellido>Martínez</apellido>
+                        <ciudad>Córdoba</ciudad>
+                        <telefono>748055671</telefono>
+                    </cliente>
+                    <cliente id="C3">
+                        <dni>72195472D</dni>
+                        <nombre>David</nombre>
+                        <apellido>Maldonado</apellido>
+                        <ciudad>Córdoba</ciudad>
+                        <telefono>748055671</telefono>
+                    </cliente>
+                    <cliente id="C3">
+                        <dni>73195689F</dni>
+                        <nombre>Jesús</nombre>
+                        <apellido>Fernández</apellido>
+                        <ciudad>Córdoba</ciudad>
+                        <telefono>748055671</telefono>
+                    </cliente>
+            
+                </clientes>
+            
+                <!-- VENTAS-->
+                <ventas>
+                    <venta cod="V1" producto="P1" cliente="C1">
+                        <cantidad>5</cantidad>
+                        <fecha>2022-06-06</fecha>
+                        <descuento>10</descuento>
+                    </venta>
+                    <venta cod="V3" producto="P2" cliente="C2">
+                        <cantidad>3</cantidad>
+                        <fecha>2022-06-06</fecha>
+                        <descuento>15</descuento>
+                    </venta>
+                    <venta cod="V4" producto="P7" cliente="C3">
+                        <cantidad>8</cantidad>
+                        <fecha>2022-06-06</fecha>
+                        <descuento>5</descuento>
+                    </venta>
+                    <venta cod="V5" producto="P3" cliente="C4">
+                        <cantidad>3</cantidad>
+                        <fecha>2022-06-06</fecha>
+                        <descuento>20</descuento>
+                    </venta>
+                    <venta cod="V6" producto="P5" cliente="C1">
+                        <cantidad>2</cantidad>
+                        <fecha>2022-06-06</fecha>
+                        <descuento>5</descuento>
+                    </venta>
+                    <venta cod="V7" producto="P1" cliente="C3">
+                        <cantidad>20</cantidad>
+                        <fecha>2022-06-06</fecha>
+                        <descuento>50</descuento>
+                    </venta>
+                    <venta cod="V8" producto="P4" cliente="C2">
+                        <cantidad>3</cantidad>
+                        <fecha>2022-06-06</fecha>
+                        <descuento>25</descuento>
+                    </venta>
+                </ventas>
+            
+                <!-- PRODUCTOS -->
+            
+                <productos>
+                    <producto id="P1" proveedor="PR1" categoria="C1">
+                        <nombre>Silla de exterior</nombre>
+                        <precio>30</precio>
+                    </producto>
+                    <producto id="P2" proveedor="PR1" categoria="C1">
+                        <nombre>Lampara</nombre>
+                        <precio>30</precio>
+                    </producto>
+                    <producto id="P3" proveedor="PR2" categoria="C2">
+                        <nombre>Camiseta</nombre>
+                        <precio>15</precio>
+                    </producto>
+                    <producto id="P4" proveedor="PR1" categoria="C5">
+                        <nombre>Pintalabios</nombre>
+                        <precio>5</precio>
+                    </producto>
+                    <producto id="P5" proveedor="PR5" categoria="C7">
+                        <nombre>Ordenador Portátil Asus</nombre>
+                        <precio>899</precio>
+                    </producto>
+                    <producto id="P6" proveedor="PR4" categoria="C5">
+                        <nombre>Crema facial</nombre>
+                        <precio>10</precio>
+                    </producto>
+                    <producto id="P7" proveedor="PR3" categoria="C7">
+                        <nombre>Ratón Logitech </nombre>
+                        <precio>57</precio>
+                    </producto>
+                    <producto id="P8" proveedor="PR5" categoria="C3">
+                        <nombre>Televisión LG</nombre>
+                        <precio>650</precio>
+                    </producto>
+                    <producto id="P9" proveedor="PR1" categoria="C6">
+                        <nombre>Archivador</nombre>
+                        <precio>13.99</precio>
+                    </producto>
+                    <producto id="P10" proveedor="PR4" categoria="C4">
+                        <nombre>Pesas 5Kg</nombre>
+                        <precio>20</precio>
+                    </producto>
+                </productos>
+            
+                <!-- PROVEEDORES -->
+                <proveedores>
+                    <proveedor id="PR1">
+                        <nombre>Cecilio</nombre>
+                        <apellido>Rodenas</apellido>
+                        <web>www.crodenas.com</web>
+                        <telefono>694959050</telefono>
+                        <ciudad>Madrid</ciudad>
+                    </proveedor>
+                    <proveedor id="PR2">
+                        <nombre>Paco</nombre>
+                        <apellido>Perez</apellido>
+                        <web>www.pperez.com</web>
+                        <telefono>694959597</telefono>
+                        <ciudad>Jaén</ciudad>
+                    </proveedor>
+                    <proveedor id="PR3">
+                        <nombre>Antonio</nombre>
+                        <apellido>Sánchez</apellido>
+                        <telefono>694957598</telefono>
+                        <ciudad>Mucia</ciudad>
+                    </proveedor>
+                    <proveedor id="PR4">
+                        <nombre>Ana</nombre>
+                        <apellido>López</apellido>
+                        <web>www.alopez.com</web>
+                        <telefono>684637976</telefono>
+                        <ciudad>Badajoz</ciudad>
+                    </proveedor>
+                    <proveedor id="PR5">
+                        <nombre>Sara</nombre>
+                        <apellido>Martín</apellido>
+                        <telefono>638956308</telefono>
+                        <ciudad>Granada</ciudad>
+                    </proveedor>
+                </proveedores>
+            
+                <!-- CATEGORÍAS -->
+                <categorias>
+                    <categoria cod="C1">
+                        <nombre>Mobiliario</nombre>
+                        <descripcion>Categoría de muebles</descripcion>
+                    </categoria>
+                    <categoria cod="C2">
+                        <nombre>Ropa</nombre>
+                        <descripcion>Categoría de ropa</descripcion>
+                    </categoria>
+                    <categoria cod="C3">
+                        <nombre>Electrodomésticos</nombre>
+                        <descripcion>Categoría de electrodomésticos</descripcion>
+                    </categoria>
+                    <categoria cod="C4">
+                        <nombre>Deporte</nombre>
+                        <descripcion>Categoría de deporte</descripcion>
+                    </categoria>
+                    <categoria cod="C5">
+                        <nombre>Belleza</nombre>
+                        <descripcion>Categoría de belleza</descripcion>
+                    </categoria>
+                    <categoria cod="C6">
+                        <nombre>Papelería</nombre>
+                        <descripcion>Categoría de papelería</descripcion>
+                    </categoria>
+                    <categoria cod="C7">
+                        <nombre>Informática</nombre>
+                        <descripcion>Categoría de informática</descripcion>
+                    </categoria>
+                </categorias>
+            </empresa>
+        </xmp>
+
+    </div>
+
+    <div>
+        <h3>Consultas XQuery</h3>
+        <h4>1.Mostrar el nombre y apellido de los clientes que tienen compras.</h4>
+        <p class="solution">Solución: <span>for $clientes in
+                doc("empresa.xml")/empresa/clientes/cliente[@id=//venta/@cliente]
+                return $clientes/nombre | $clientes/apellido</span>
+        </p>
+
+
+
+        <h4>2.Mostrar los dni de los clientes que han comprado un producto gestionado por el proveedor Cecilio Rodenas.
+        </h4>
+        <p class="solution">Solución: <span>for $clientes in doc("empresa.xml")/empresa/clientes/cliente[@id=//venta
+                [@id=//venta[@producto=//producto[@proveedor=//proveedor[//proveedor/nombre='Cecilio'and
+                //proveedor/apellido='Rodenas']/@id]/@id]/@cliente]/@cliente]
+                return $clientes/dni</span>
+        </p>
+
+        <h4>3. Mostrar la cantidad de productos de la categoría mobiliario con un precio superior a 50€.</h4>
+        <p class="solution">Solución: <span>for $productos in
+                doc("empresa.xml")/empresa/productos/producto[@categoria=//categoria[nombre='Mobiliario']/@cod and
+                precio>50]
+                return $productos/nombre</span>
+        </p>
+
+        <h4>4. Obtener la categoría, nombre y precio de los productos con precio mayor o iguales a 100€.</h4>
+        <p class="solution">Solución: <span>for $productos in doc("empresa.xml")/empresa/productos/producto[precio<=100]
+                    return $productos/nombre | $productos/precio | <categoria>{$productos/@id}</categoria></span>
+        </p>
+
+        <h4>5. Obtener dni,nombre y apellidos de los clientes que hayan realizado más de 5 compras.</h4>
+        <p class="solution">Solución: <span>
+                <clientes>
+                    {
+                    for $clientes in doc("empresa.xml")/empresa/clientes/cliente[count(@id=//venta/@cliente)<5] return
+                        <cliente>{$clientes/dni|$clientes/nombre|$clientes/apellido}</cliente>
+                        }
+                </clientes>
+            </span>
+        </p>
+
+        <h4>6. Muestra el nombre de la categoria a la que pertenece el producto de la venta "V1".</h4>
+        <p class="solution">Solución: <span>
+                for $categorias in
+                doc("empresa.xml")/empresa/categorias/categoria[@cod=//producto[@id=//venta[@cod='V1']/@producto]/@categoria]
+
+                return $categorias/nombre
+
+            </span>
+        </p>
+
+        <h4>7. Muestra el nombre y apellidos y la web de los proveedores que tienen página web</h4>
+        <p class="solution">Solución: <span>
+                <proveedores>
+                    {
+                    for $proveedores in doc("empresa.xml")/empresa/proveedores/proveedor[web]
+
+                    return <proveedor>{$proveedores/nombre| $proveedores/apellido |$proveedores/web}</proveedor>
+                    }
+                </proveedores>
+
+
+            </span>
+        </p>
+
+        <h4>8. Haz una lista con las categorias de productos que nadie ha comprado.</h4>
+        <p class="solution">Solución: <span>
+                <ul>
+                    {
+                    for $categorias in
+                    doc("empresa.xml")/empresa/categorias/categoria[@cod=//producto[not(@id=//venta/@producto)]/@categoria]
+                    return <li>{$categorias}</li>
+                    }
+
+                </ul>
+            </span>
+        </p>
+
+        <h4>9. Muestra el nombre de los clientes y proveedores que pertenecen a Córdoba.</h4>
+        <p class="solution">Solución: <span>
+
+                <clientes>
+                    {
+                    for $clientes in doc("empresa.xml")/empresa/clientes/cliente[ciudad='Córdoba']
+                    return $clientes
+                    }
+                </clientes>
+                ,
+                <proveedores>
+                    {
+                    for $proveedores in doc("empresa.xml")/empresa/proveedores/proveedor[ciudad='Córdoba']
+                    return $proveedores
+                    }
+                </proveedores>
+
+            </span>
+        </p>
+
+        <h4>10. Muestra el nombre y apellidos del cliente que más cantidad ha comprado en una compra.</h4>
+        <p class="solution">Solución: <span>
+                let $max_cantidad := doc("empresa.xml")//ventas/ max(venta/cantidad)
+
+                for $cliente in
+                doc("empresa.xml")/empresa/clientes/cliente[@id=//venta[cantidad=$max_cantidad]/@cliente]
+
+                return $cliente/nombre | $cliente/apellido</span>
+        </p>
+    </div>
+
+
+</body>
+
+</html>
