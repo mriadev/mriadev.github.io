@@ -619,7 +619,7 @@
                     {
                     for $categorias in
                     doc("empresa.xml")/empresa/categorias/categoria[@cod=//producto[not(@id=//venta/@producto)]/@categoria]
-                    return <lista>$categorias</lista>
+                    return <lista>{$categorias}</lista>
                     }
 
                 /ul
