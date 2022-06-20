@@ -615,14 +615,14 @@
 
         <h4>8. Haz una lista con las categorias de productos que nadie ha comprado.</h4>
         <p class="solution">Solución: <span>
-                <ul>
+                ul
                     {
                     for $categorias in
                     doc("empresa.xml")/empresa/categorias/categoria[@cod=//producto[not(@id=//venta/@producto)]/@categoria]
                     return <li>{$categorias}</li>
                     }
 
-                </ul>
+                /ul
             </span>
         </p>
 
