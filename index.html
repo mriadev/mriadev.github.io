@@ -2,49 +2,207 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="alternate" type="application/rss+xml" title="María Cervilla-HTML" href="https://mriadev.github.io/rss/rss.xml" />
-   <link rel="alternate" type="application/atom+xml" title="María Cervilla-XML" href="https://mriadev.github.io/atom/atom.xml" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/projects-cards.css">
+    <!-- <link rel="stylesheet" href="./assets/css/theme.css"> -->
+
+    <!-- Cargar GSAP desde la CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="./assets/js/themeToggle.js"></script>
+
+    <title>Maria</title>
 </head>
 
 <body>
-  <div id="grid">
-    <header id="header">
-      <img src="img/perfil.png" id="perfil" title="Logo LMM" alt="imágen logo de Lenguaje de Marcas" height="120px">
-      <h1>Maria Cervilla Alcalde</h1>
+    <header>
+        <div class="logo-container">
+            <img id="logo" src="./assets/images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
 
+                <!-- <li>
+                    <div class="day-night">
+                        <button class="toggle">
+                            <div>
+                                <svg class="sun" viewBox="0 0 24 24">
+                                    <g class="lines">
+                                        <line x1="1" y1="12" x2="2" y2="12" />
+                                        <line x1="4.2" y1="4.2" x2="4.9" y2="4.9" />
+                                        <line x1="12" y1="1" x2="12" y2="2" />
+                                        <line x1="19.8" y1="4.2" x2="19.1" y2="4.9" />
+                                        <line x1="23" y1="12" x2="22" y2="12" />
+                                        <line x1="19.8" y1="19.8" x2="19.1" y2="19.1" />
+                                        <line x1="12" y1="23" x2="12" y2="22" />
+                                        <line x1="4.2" y1="19.8" x2="4.9" y2="19.1" />
+                                    </g>
+                                    <circle cx="12" cy="12" r="6" />
+                                </svg>
+                                <svg class="moon" viewBox="0 0 24 24">
+                                    <path d="M18,16C12.5,16,8,11.5,8,6 c0-0.9,0.1-1.8,0.4-2.6C4.1,4.5,1,8.4,1,13c0,5.5,4.5,10,10,10c4.6,0,8.5-3.1,9.6-7.4C19.8,15.9,18.9,16,18,16z" />
+                                    <g class="star-1">
+                                        <line x1="15" y1="1" x2="15" y2="5" />
+                                        <line x1="13" y1="3" x2="17" y2="3" />
+                                    </g>
+                                    <g class="star-2">
+                                        <line x1="21" y1="7" x2="21" y2="11" />
+                                        <line x1="19" y1="9" x2="23" y2="9" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <svg class="line" viewBox="0 0 52 36"></svg>
+                        </button>
+                    </div>
+                </li> -->
+                <li>
+                    <a href="#"><img id="home" src="./assets/images/home.svg"></a>
+                    <p>Home</p>
+                </li>
+                <li>
+                    <a href="https://github.com/mriadev" target="_blank"><img src="./assets/images/github.svg"></a>
+                    <p>GitHub</p>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/maria-cervilla-alcalde/" target="_blank"><img
+                            src="./assets/images/linkedin.svg"></a>
+                    <p>LinkedIn</p>
+                </li>
+                <li>
+                    <!-- email -->
+                    <a href="mailto:mcervillaalcalde@gmail.com"><img src="./assets/images/email.svg"></a>
+                    <p>Email</p>
+                </li>
+                <li>
+                    <!-- cv pdf fichero -->
+                    <a href="assets/cv.pdf" target="_blank"><img src="./assets/images/cv.svg"></a>
+                    <p>CV</p>
+
+                </li>
+
+            </ul>
+        </nav>
     </header>
-    
-    <nav id="nav">
+    <main>
+        <section class="container-illustration">
+            <img id="main-illustration" src="./assets/images/mria_glitch.webp">
+        </section>
+        <section class="greeting">
+            <section id="my-info">
+                <h2>¡HOLA!</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam accusamus ea illum harum
+                    excepturi, autem repudiandae, quaerat nobis reprehenderit qui unde. Veritatis odio quasi magnam
+                    sapiente quibusdam inventore delectus.
+                </p>
+            </section>
+            <section class="content">
+                <h3>PROYECTOS</h3>
+                <section class="projects">
+                    <div class="project-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="https://unblast.com/wp-content/uploads/2018/08/Gradient-Mesh-22.jpg" alt="">
+                            <div class="wrapper">
+                                <h4>Project Name</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, dignissimos
+                                    dolore.
+                                    Blanditiis odit, nobis eius molestiae, rerum iure atque aliquam </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="https://unblast.com/wp-content/uploads/2018/08/Gradient-Mesh-22.jpg" alt="">
+                            <div class="wrapper">
+                                <h4>Project Name</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, dignissimos
+                                    dolore.
+                                    Blanditiis odit, nobis eius molestiae, rerum iure atque aliquam </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="https://unblast.com/wp-content/uploads/2018/08/Gradient-Mesh-22.jpg" alt="">
+                            <div class="wrapper">
+                                <h4>Project Name</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, dignissimos
+                                    dolore.
+                                    Blanditiis odit, nobis eius molestiae, rerum iure atque aliquam </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="https://unblast.com/wp-content/uploads/2018/08/Gradient-Mesh-22.jpg" alt="">
+                            <div class="wrapper">
+                                <h4>Project Name</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, dignissimos
+                                    dolore.
+                                    Blanditiis odit, nobis eius molestiae, rerum iure atque aliquam </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <h3>TECNOLOGÍAS</h3>
+                <section class="tecnologies">
+                    <div class="tecnologies-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="./assets/images/tecnologies/html.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="tecnologies-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="./assets/images/tecnologies/css.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="tecnologies-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="./assets/images/tecnologies/javascript.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="tecnologies-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="./assets/images/tecnologies/react.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="tecnologies-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="./assets/images/tecnologies/php.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="tecnologies-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="./assets/images/tecnologies/laravel.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="tecnologies-card-sm">
+                        <div class="card-border-gradient"></div>
+                        <div class="card-container">
+                            <img src="./assets/images/tecnologies/java.svg" alt="">
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
 
-      <ul>
-        <li><a href="lm.html">Lenguaje de Marcas</a></li>
-        
-
-      </ul>
-    </nav>
-    <section id="contenido">
-      <img id="fondo" src="img/fondo1.jpg">
-      <div class="texto-img">
-        <h2>Te doy la bienvenida a mi sitio web</h2>
-        <p>En esta web compartiré mis actividades realizadas en clase.</p>
-      </div>
-    </section>
-
-    <footer id="footer">
-     <a href="rss/rss.xml"><img src="img/rss.png" width="2%"></a>
-      <a href = "atom/atom.xml"><img src="img/rss.png" width="2%"></a>
-      <p>&copy;Todos los derechos reservados a Maria Cervilla alcalde. 2022</p>
-    </footer>
-
-
-  </div>
+    </main>
 </body>
 
 </html>

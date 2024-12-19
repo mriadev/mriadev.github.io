@@ -1,0 +1,217 @@
+body {
+    --day-background: #ffffff;
+    --night-background: #121820;
+
+    font-family: 'Inter', Arial;
+    /* .dribbble {
+        position: fixed;
+        display: block;
+        right: 20px;
+        bottom: 20px;
+        img {
+            display: block;
+            height: 28px;
+        }
+    } */
+   
+} 
+
+
+body {
+    background-color: var(--day-background);
+    color: var(--line);
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body:has(.day-night.night) {
+    background: var(--night-background);
+    color: white; 
+}
+
+header{
+    background: url("../images/header_bg.jpg" ) no-repeat;
+    background-size:cover;
+}
+
+header .logo-container {
+    padding: 1em 0;
+    text-align: center;
+}
+
+header .logo-container #logo{
+    height: 50px;
+
+}
+
+header .logo-container #logo:hover{
+    transform: scale(1.1);
+}
+
+header nav{
+    padding: 1.5em 0;
+}
+
+header nav ul {
+    display: flex;
+    gap: 25px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+header nav ul li{
+    text-align: center;
+    width: 25px;
+    position: relative;
+}
+
+header nav ul li img{
+  width: 100%;
+  color: #ffffff;
+}
+
+header nav ul li p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+    top: 40%; /* Ajustar la posición inicial */
+    left: 50%;
+    transform: translate(-50%, -10px); /* Desplazado ligeramente hacia arriba */
+    opacity: 0; /* Oculto inicialmente */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Transición suave */
+}
+
+header nav ul li:hover p {
+    transform: translate(-50%, 20px); /* Desplazado a su posición natural */
+    opacity: 1; /* Visible */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;           /* Elimina el padding por defecto */
+    margin: 0;            /* Elimina el margen por defecto */
+}
+
+main .container-illustration{
+    margin: 12px 0;
+    text-align: center;
+}
+
+main .container-illustration #main-illustration {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    /* Animación para levitar */
+    animation: levitar 3s ease-in-out infinite alternate;
+}
+
+main .content nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+main .content nav ul li:hover{
+    cursor: pointer;
+}
+
+main .greeting{
+    text-align: justify;
+}
+
+main .greeting{
+    margin: 0 1.2em;
+}
+
+main .tecnologies{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+@keyframes levitar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Sube */
+    }
+    100% {
+        transform: translateY(0); /* Baja de nuevo */
+    }
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+/* Pantallas de tabletas y dispositivos más grandes */
+@media (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Pantallas de tabletas en modo horizontal y dispositivos medianos */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Pantallas de computadoras portátiles y escritorios */
+@media (min-width: 992px) {
+    body {
+        font-size: 20px;
+        display: flex;
+        height: 100vh;
+    }
+
+    header {
+        flex: 10%;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 46px;
+    }
+
+    header nav ul li {
+        width: 35px;
+    }
+
+    main{
+        display: flex;
+    }
+
+    main .container-illustration #main-illustration  {
+        max-width: none;
+        max-height: 92vh;
+        margin: 24px 1.5em;
+
+    }
+
+    main .greeting{
+        margin: 0 1.5em;
+    }
+
+    main .greeting .content .projects{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+    } 
+}
+
+/* Pantallas de monitores grandes */
+@media (min-width: 1200px) {
+    body {
+        font-size: 22px;
+    }
+}

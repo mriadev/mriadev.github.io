@@ -1,1 +1,0 @@
-# mriadev.github.io
